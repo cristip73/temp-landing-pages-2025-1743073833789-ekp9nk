@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 7, 25, 17;
+  --background-rgb: 255, 255, 255;
+  
+  /* Brand Colors */
+  --color-kilostop-pink: 255, 90, 129;
+  --color-kilostop-green: 38, 181, 131;
+  --color-kilostop-orange: 255, 83, 26;
+  --color-kilostop-blue: 59, 137, 237;
+  --color-kilostop-red: 214, 47, 87;
+  
+  /* Text Colors */
+  --color-text-black: 7, 25, 17;
+  --color-text-gray: 119, 140, 133;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-text-black font-opensans;
+  }
+
+  h1, h2 {
+    @apply font-libre;
+  }
+
+  h3, h4, h5 {
+    @apply font-opensans;
+  }
+}
+
+@layer components {
+  .gradient-button {
+    @apply bg-gradient-to-r from-kilostop-pink to-kilostop-orange 
+           text-white font-semibold py-4 px-8 rounded-full
+           hover:opacity-90 transition-opacity;
+  }
+
+  .section-padding {
+    @apply px-4 md:px-8 lg:px-16 py-16 md:py-24;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
